@@ -29,7 +29,7 @@ jobs:
             with:
               scan-type: fs
               image-ref: 'adham00/my-app:${{ github.sha }}'
-              format: 'table'
+              format: 'sarif'
               template: '@/contrib/sarif.tpl'
               output: 'trivy-results.sarif'
               severity: 'CRITICAL,HIGH'
