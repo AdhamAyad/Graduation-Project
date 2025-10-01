@@ -28,9 +28,9 @@ jobs:
             uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
             with:
               image-ref: 'adham00/my-app:${{ github.sha }}'
-              format: 'template'
+              format: 'json'
               template: '@/contrib/sarif.tpl'
-              output: 'trivy-results.sarif'
+              output: 'trivy-results.json'
               severity: 'CRITICAL,HIGH'
     
           - name: Upload Trivy scan results to GitHub Security tab
