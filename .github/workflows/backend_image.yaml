@@ -1,4 +1,4 @@
-name: docker pipeline
+name: backend image build and scanning pipeline
 on:
     workflow_dispatch:
     push:
